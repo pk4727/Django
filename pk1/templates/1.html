@@ -1,0 +1,29 @@
+{% include "header.html" %}
+
+<html>
+    <head>
+        <title>
+            {{page}}
+        </title>
+        <style>
+            .main
+            {
+                width:1000px;
+                background-color: red;
+                color: white;
+                padding:20px;
+                front-size:30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            Hii             {% comment %}  print from html     {% endcomment %}
+            {{pk}}          {% comment %}  print form render   {% endcomment %}
+            !               {% comment %}  print from html     {% endcomment %}
+            {{vill}}
+        </div>
+    </body>
+</html>
+
+{% include "footer.html" %}

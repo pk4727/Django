@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>ADD</title>
+  </head>
+
+  <body>
+    <h1>Add New Employee Details !</h1>
+
+    <form method="post" action=''>
+      {% csrf_token %}
+      <label for="First_name">First Name</label><br>
+      <input name="First_name" type="text" id="First_name" value="{{ First_name }}"><br>
+
+      <label for="Last_name">Last Name</label><br>
+      <input name="Last_name" type="text" id="Last_name" value="{{ Last_name }}"><br>
+
+      <label for="Phone">Phone</label><br>
+      <input name="Phone" type="number" id="Phone" value="{{ Phone }}"><br>
+
+      <label for="Salary">Salary</label><br>
+      <input name="Salary" type="number" id="Salary" value="{{ Salary }}"><br>
+
+      <label for="Bonus">Bonus</label><br>
+      <input name="Bonus" type="number" id="Bonus" value="{{ Bonus }}"><br>
+
+      <label for="Department_Name">Department Name</label><br>
+      <input name="Department_Name" type="number" id="Department_Name" value="{{ Department_Name }}"><br>
+
+      <label for="Role_Name">Role</label><br>
+      <input name="Role_Name" type="number" id="Role_Name" value="{{ Role_Name }}"><br>
+      <hr>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+      {{output}}
+    </form>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+  </body>
+
+</html>

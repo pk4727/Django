@@ -1,0 +1,111 @@
+{% include "header.html" %}
+
+<html>
+    <head>
+        <title>
+            {{urln}}
+        </title>
+
+        <style>
+            .main
+            {
+                width:1000px;
+                background-color: black;
+                color: white;
+                padding:20px;
+                front-size:30px;
+            }
+        </style>
+
+    </head>
+
+
+    <body>
+        <div> # some function of html page and forloop keywords </div>
+        <div class="main">
+            <div>{{name}} </div>                        {% comment %}  print from html     {% endcomment %}
+            <div>{{distic}} </div>                      {% comment %}  print form render   {% endcomment %}
+            {% for i in family %}                       {% comment %}  print from html     {% endcomment %}
+            <br/>
+            <div>{{forloop.counter0}} (counter0),
+                 {{forloop.counter}} (counter),
+                 "{{i}}" (family name from dict of views),
+                 {{forloop.revcounter}} (revcounter),
+                 {{forloop.revcounter0}} (revcounter0),
+            </div>
+            <div> {{forloop.first}} (forloop.first return only first output true) </div>
+            <div> {{forloop.last}} (forloop.last return only last output true) </div>
+            {% endfor %}
+        </div>
+
+
+        <br/>
+        <div> # for loop for nested dictionary </div>
+        <table border="1" cellpadding="10">
+            <tr>
+                <td> Name </td>
+                <td> Phone </td>
+            </tr>
+
+            {% for j in na_no %}
+                <tr>
+                    <td>{{j.Name}} </td>
+                    <td>{{j.Phone}} </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+
+        <br/>
+        <div> # for loop for list </div>
+        <table border="1" cellpadding="10">
+            <tr>
+                <td> table of 10</td>
+                <td> table of 20</td>
+            </tr>
+
+            {% for i in table %}
+                <tr>
+                    <td> {{i.10}} </td>
+                    <td> {{i.20}} </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+
+        <br />
+        <div> # if / elif / else </div>
+        <table border="1" cellpadding="10">
+            <tr>
+                <td> number range </td>
+                <td> loop</td>
+            </tr>
+
+            {% for i in no %}
+            {% if i > 50 %}
+            <tr>
+                    <td> {{i}} </td>
+                    <td> if > 50 </td>
+            </tr>
+            {% elif i < 30 %}
+            <tr>
+                <td>{{i}}</td>
+                <td> elif < 30 </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td> {{i}} </td>
+                <td> else </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+
+
+        <br/>
+        <div> #  </div>
+
+        
+    </body>
+</html>
+{% include "footer.html" %}

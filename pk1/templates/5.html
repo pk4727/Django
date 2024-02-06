@@ -1,0 +1,59 @@
+{% comment %} {% load static %} --> "{% static 'path' %}" put for image call when static dir not set {% endcomment %}
+<!DOCTYPE html>
+
+{% include "header.html" %}
+
+<html>
+
+  <head>
+    <link rel="shortcut icon" href="C:\Users\Pradhuman_kumar(pk)\Desktop\code\Django\pk1\static\img\favicon.ico"
+      type="image/x-icon">
+    <title>page5</title>
+  </head>
+
+  <body>
+
+    <h1>welcome pk!</h1>
+    <br>
+    <div>{{news_data.news_title}}</div>
+    <br>
+    <div>{{ news_data.news_desc | safe }}</div>
+    <br>
+    {% if news_data.news_img != NULL %}
+    <div class="col-12"><img src="/media/{{news_data.news_img}}" style="width: 95%;"></div>
+    {% endif %}
+    <br>
+    image portion start :-
+    <div class="image-section">
+      <div class="section-style">
+        <p>image1:-</p>
+        <img src="C:\Users\Pradhuman_kumar(pk)\Desktop\code\Django\pk1\static\img\PHOTO.jpg" width="400px"
+          alt="not found" />
+      </div>
+
+      <div class="section-style">
+        <p>image2:-</p>
+        <img src="C:\Users\Pradhuman_kumar(pk)\Desktop\code\Django\pk1\static\img\3.jpg" width="400px"
+          alt="not found" />
+      </div>
+    </div>
+
+    <div class="image-section">
+      <div class="section-style">
+        <p>image3:-</p>
+        <img src="C:\Users\Pradhuman_kumar(pk)\Desktop\code\Django\pk1\static\img\4.jpg" width="400px"
+          alt="not found" />
+      </div>
+
+      <div class="section-style">
+        <p>image4:-</p>
+        <img src="C:\Users\Pradhuman_kumar(pk)\Desktop\code\Django\pk1\static\img\6.jpg" width="400px"
+          alt="not found" />
+      </div>
+    </div>
+
+  </body>
+
+  {% include "footer.html" %}
+
+</html>
